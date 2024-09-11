@@ -1,83 +1,86 @@
 <?php
 
-class Author {
-     public $name;
-     public $description;
+require_once 'Author.php';
+// class Author {
+//      public $name;
+//      public $description;
  
-     public function __construct($name, $description) {
-         $this->name = $name;
-         $this->description = $description;
-     }
- }
+//      public function __construct($name, $description) {
+//          $this->name = $name;
+//          $this->description = $description;
+//      }
+//  }
+
+require_once 'Publisher.php';
+//  class Publisher {
+//      public $name;
+//      public $address;
+//      public $phone;
  
- class Publisher {
-     public $name;
-     public $address;
-     public $phone;
+//      public function __construct($name, $address, $phone) {
+//          $this->name = $name;
+//          $this->address = $address;
+//          $this->phone = $phone;
+//      }
  
-     public function __construct($name, $address, $phone) {
-         $this->name = $name;
-         $this->address = $address;
-         $this->phone = $phone;
-     }
+//      public function setPhone($phone) : void {
+//          $this->phone = $phone;
+//      }
  
-     public function setPhone($phone) : void {
-         $this->phone = $phone;
-     }
+//      public function getPhone() : int {
+//          return $this->phone;
+//      }
+//  }
+
+require_once 'Book.php';
+//  class Book {
+//      public $ISBN;
+//      public $title;
+//      public $description;
+//      public $category;
+//      public $language;
+//      public $numberOfPage;
+//      public $author;
+//      public $publisher;
  
-     public function getPhone() : int {
-         return $this->phone;
-     }
- }
+//      public function __construct($ISBN, $title, $description, $category, $language, $numberOfPage, $author, $publisher) {
+//          $this->ISBN = $ISBN;
+//          $this->title = $title;
+//          $this->description = $description;
+//          $this->category = $category;
+//          $this->language = $language;
+//          $this->numberOfPage = $numberOfPage;
+//          $this->author = $author;
+//          $this->publisher = $publisher;
+//      }
  
- class Book {
-     public $ISBN;
-     public $title;
-     public $description;
-     public $category;
-     public $language;
-     public $numberOfPage;
-     public $author;
-     public $publisher;
+//      public function showAll() {
+//          $detail = [
+//              "ISBN" => $this->ISBN,
+//              "Title" => $this->title,
+//              "Description" => $this->description,
+//              "Category" => $this->category,
+//              "Language" => $this->language,
+//              "Number of Pages" => $this->numberOfPage,
+//              "Author" => $this->author->name,
+//              "Publisher" => $this->publisher->name
+//          ];
  
-     public function __construct($ISBN, $title, $description, $category, $language, $numberOfPage, $author, $publisher) {
-         $this->ISBN = $ISBN;
-         $this->title = $title;
-         $this->description = $description;
-         $this->category = $category;
-         $this->language = $language;
-         $this->numberOfPage = $numberOfPage;
-         $this->author = $author;
-         $this->publisher = $publisher;
-     }
+//          $result = "";
+//          foreach ($detail as $key => $value) {
+//              $result .= "$key: $value\n";
+//          }
+//          return $result;
+//      }
  
-     public function showAll() {
-         $detail = [
-             "ISBN" => $this->ISBN,
-             "Title" => $this->title,
-             "Description" => $this->description,
-             "Category" => $this->category,
-             "Language" => $this->language,
-             "Number of Pages" => $this->numberOfPage,
-             "Author" => $this->author->name,
-             "Publisher" => $this->publisher->name
-         ];
- 
-         $result = "";
-         foreach ($detail as $key => $value) {
-             $result .= "$key: $value\n";
-         }
-         return $result;
-     }
- 
-     public function detail($ISBN) {
-         if ($this->ISBN == $ISBN) {
-             return $this->showAll();
-         } else {
-             return "Sorry, Book not found sir";
-         }
-     }
- }
+//      public function detail($ISBN) {
+//          if ($this->ISBN == $ISBN) {
+//              return $this->showAll();
+//          } else {
+//              return "Sorry, Book not found sir";
+//          }
+//      }
+//  }
  
  
  $author = new Author("karim almurim", "Penulis berdarah jepang");
